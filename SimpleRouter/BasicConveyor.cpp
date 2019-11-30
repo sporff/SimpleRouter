@@ -2,7 +2,8 @@
 #include "BasicConveyor.h"
 
 
-BasicConveyor::BasicConveyor()
+BasicConveyor::BasicConveyor(std::string id)
+	: ConveyorBase(id)
 {
 }
 

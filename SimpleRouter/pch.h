@@ -1,6 +1,14 @@
 #ifndef PCH_H
 #define PCH_H
 
+// std
+#include <string>
+#include <vector>
+#include <list>
+#include <map>
+#include <unordered_map>
+#include <memory>
+
 // SFML
 #include <SFML/Graphics.hpp>
 

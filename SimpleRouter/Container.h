@@ -6,5 +6,10 @@ class Container :
 public:
 	Container();
 	virtual ~Container();
+
+	std::string getId();
+private:
+	std::string m_id;
 };
 
+using ContainerSharedPtr = std::shared_ptr<Container>;

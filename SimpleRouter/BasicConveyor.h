@@ -4,7 +4,8 @@ class BasicConveyor :
 	public ConveyorBase
 {
 public:
-	BasicConveyor();
+	BasicConveyor(std::string id);
 	~BasicConveyor();
 };
 
+using BasicConveyorSharedPtr = std::shared_ptr<BasicConveyor>;

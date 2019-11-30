@@ -7,7 +7,13 @@
 int main()
 //int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, char*, int nShowCmd)
 {
-	sf::RenderWindow window(sf::VideoMode(1000, 800), "SFML window");
+	Router mainRouter;
+
+	mainRouter.addConveyor(std::make_shared<BasicConveyor>("zone1"));
+	mainRouter.addConveyor(std::make_shared<BasicConveyor>("zone2"));
+	mainRouter.addConveyor(std::make_shared<BasicConveyor>("zone3"));
+
+	sf::RenderWindow window(sf::VideoMode(1000, 800), "Simple Router");
 	sf::CircleShape shape(10.0f);
 	shape.setFillColor(sf::Color(100, 50, 180));
 
