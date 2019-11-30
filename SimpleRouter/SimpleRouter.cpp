@@ -13,6 +13,9 @@ int main()
 	mainRouter.addConveyor(std::make_shared<BasicConveyor>("zone2"));
 	mainRouter.addConveyor(std::make_shared<BasicConveyor>("zone3"));
 
+	mainRouter.addContainer(std::make_shared<Container>("LP100"));
+	mainRouter.addContainer(std::make_shared<Container>("LP101"));
+
 	sf::RenderWindow window(sf::VideoMode(1000, 800), "Simple Router");
 	sf::CircleShape shape(10.0f);
 	shape.setFillColor(sf::Color(100, 50, 180));

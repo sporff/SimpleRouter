@@ -4,7 +4,7 @@ class Container :
 	public RouterObject
 {
 public:
-	Container();
+	Container(std::string id);
 	virtual ~Container();
 
 	std::string getId();

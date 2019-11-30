@@ -2,8 +2,9 @@
 #include "Container.h"
 
 
-Container::Container()
+Container::Container(std::string id)
 {
+	m_id = id;
 }
 
 

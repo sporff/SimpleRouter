@@ -7,7 +7,6 @@ ConveyorBase::ConveyorBase(std::string id)
 	m_id = id;
 }
 
-
 ConveyorBase::~ConveyorBase()
 {
 }
