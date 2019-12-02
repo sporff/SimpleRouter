@@ -1,13 +1,27 @@
 #pragma once
 #include "ConveyorBase.h"
+
+class BasicConveyor;
+using BasicConveyorSharedPtr = std::shared_ptr<BasicConveyor>;
+
 class BasicConveyor :
 	public ConveyorBase
 {
 public:
+	enum Direction {
+		North=0,
+		East=1,
+		South=2,
+		West=3
+	};
 	BasicConveyor(std::string id);
 	~BasicConveyor();
 
-	//static std::shared_ptr<BasicConveyor> make_BasicConveyor(std::string id);
-};
+	bool setConnection(Direction dir, ConveyorBaseSharedPtr newConn);
+	bool unsetConnection(Direction dir);
 
-using BasicConveyorSharedPtr = std::shared_ptr<BasicConveyor>;
+	virtual bool isSynchronous(std::string conv1, std::string conv2);
+
+private:
+	ConveyorBaseSharedPtr m_connections[4];
+};
